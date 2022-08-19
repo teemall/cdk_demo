@@ -4,24 +4,6 @@ import * as cdk from 'aws-cdk-lib';
 import { readFileSync } from 'fs';
 import { EC2WithCWAgent } from './ec2WithCWAgent';
 
-// function ec2Creator(this: BeholderStack, vpc: ec2.Vpc, webserverRole: iam.Role, webserverSG: ec2.SecurityGroup){
-//   return new ec2.Instance(this, 'teemalCDKDemo-withoutAgent-instance', {
-//     vpc,
-//     vpcSubnets: {
-//       subnetType: ec2.SubnetType.PUBLIC,
-//     },
-//     role: webserverRole,
-//     securityGroup: webserverSG,
-//     instanceType: ec2.InstanceType.of(
-//       ec2.InstanceClass.BURSTABLE2,
-//       ec2.InstanceSize.MICRO,
-//     ),
-//     machineImage: new ec2.AmazonLinuxImage({
-//       generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2,
-//     })
-//   });
-// }
-
 export class BeholderStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
